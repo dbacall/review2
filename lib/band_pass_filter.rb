@@ -10,6 +10,12 @@ def lower_limit_filter(limit, sounds)
 end
 
 def higher_limit_filter(limit, sounds)
-  [110]
+  sounds.map { |sound| 
+    if sound > limit 
+      sound = limit
+    else
+      sound
+    end
+  }
 end
 
