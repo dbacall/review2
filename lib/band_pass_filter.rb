@@ -8,3 +8,8 @@ def lower_limit_filter(limit, sounds)
     end
   }
 end
+
+def higher_limit_filter(limit, sounds)
+  [110]
+end
+

@@ -13,3 +13,9 @@ describe '#lower_limit_filter' do
     expect(lower_limit_filter(80, [70, 60, 90])).to eq [80, 80, 90]
   end
 end
+
+describe '#higher_limit_filter' do
+  it 'changes the sound frequency to the higher limit for one sound wave' do
+    expect(higher_limit_filter(110, [120])).to eq [110]
+  end
+end
