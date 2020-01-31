@@ -5,7 +5,9 @@ end
 
 def lower_limit_filter(limit, sounds)
   sounds.map { |sound| 
-    if sound < limit 
+    if sound == nil
+      sound
+    elsif sound < limit 
       sound = limit
     else
       sound
@@ -15,7 +17,9 @@ end
 
 def higher_limit_filter(limit, sounds)
   sounds.map { |sound| 
-    if sound > limit 
+    if sound == nil
+      sound
+    elsif sound > limit 
       sound = limit
     else
       sound
