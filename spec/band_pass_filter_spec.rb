@@ -23,3 +23,9 @@ describe '#higher_limit_filter' do
     expect(higher_limit_filter(110, [120, 100])).to eq [110, 100]
   end
 end
+
+describe '#band_pass_filter' do
+  it 'changes the sound frequency of all types of waves' do
+    expect(band_pass_filter([60, 80, 120, 100], 70, 110)).to eq [70, 80, 110, 100]
+  end
+end
