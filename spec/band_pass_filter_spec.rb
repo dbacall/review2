@@ -28,4 +28,8 @@ describe '#band_pass_filter' do
   it 'changes the sound frequency of all types of waves' do
     expect(band_pass_filter([60, 80, 120, 100], 70, 110)).to eq [70, 80, 110, 100]
   end
+
+  it "doesn't change any frequencies when all within the limits" do
+    expect(band_pass_filter([80, 80, 100, 100], 70, 110)).to eq [80, 80, 100, 100]
+  end
 end
